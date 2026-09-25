@@ -10,12 +10,14 @@
 <body>
     <!-- Landing Page -->
 
-       <header>
-          <!-- Logo -->
+       <header>          <!-- Logo -->
           <a class="logo" href="#">
             <img src="logo1.png" alt="Future Secure Logo">
           </a>
           <!-- Navigation  -->
+           <button class="menu-toggle" aria-label="Open navigation">
+               <i class="fa-solid fa-bars"></i>
+           </button>
            <nav>
             <a class="nav" href="#hero-section">Home</a>
             <a class="nav" href="#about">About</a>
@@ -23,12 +25,12 @@
             <a class="nav" href="#plan">Plans</a>
             <a class="nav" href="#Calculator">SIP Calculator</a>
             <a class="nav" href="#FAQ">FAQ</a>
-           </nav>
-          <!-- Authentication -->
+            <!-- Authentication -->
            <div class="auth-buttons">
-             <a class="login-btn" href="#">Login</a>
-             <a class="start-btn" href="#">Get Started</a>
+             <a class="login-btn" href="login.html">Login</a>
+             <a class="start-btn" href="signup.html">Get Started</a>
            </div> 
+           </nav> 
        </header>
        <section class="hero" id="hero-section">
             <div class="hero-content">
@@ -39,7 +41,7 @@
                     Plan today for your child's education and future goals with simple and smart investment planning.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#" class="hero-primary-btn">Get Started</a>
+                    <a href="signup.html" class="hero-primary-btn">Get Started</a>
                     <a href="#Calculator" class="hero-secondary-btn">SIP Calculator</a>
                 </div>
             </div> 
@@ -156,7 +158,7 @@
                         <li>Goal-based planning</li>
                         <li>Growth estimation</li>
                       </ul>
-                      <button class="plan-btn">View plan</button>
+                      <button class="plan-btn" data-plan="starter">View plan</button>
                   </div>
                 <!-- Growth-Plan -->  
                   <div class="plan-card">
@@ -173,7 +175,7 @@
                         <li>SIP growth estimation</li>
                         <li>Investment tracking</li>
                       </ul>
-                      <button class="plan-btn">View plan</button>
+                      <button class="plan-btn" data-plan="growth">View plan</button>
                   </div>
                 <!-- Future-Plan -->
                   <div class="plan-card">
@@ -189,10 +191,36 @@
                         <li>Future goal estimation</li>
                         <li>Long-term growth tracking</li>
                       </ul>
-                      <button class="plan-btn">View plan</button>
+                      <button class="plan-btn" data-plan="future-plus">View plan</button>
                   </div>
             </div>    
+            <div class="plan-modal" id="plan-modal">
+               <div class="plan-modal-box">
+                  <button class="modal-close">&times;</button>
+                  <div class="modal-content">
+                     <div class="modal-head">INVESTMENT PLAN</div>
+                     <h2 id="modal-plan-name">Growth</h2>
+                     <p id="modal-plan-description">
+                        For long-term future goals
+                     </p>
+                     <div class="modal-money">
+                       <strong id="modal-plan-amount">₹3,000</strong>
+                       <span>Monthly Investment</span>
+                     </div>
+                    <div class="modal-duration" id="modal-plan-duration">
+                        8+ Years
+                    </div>
+                       <ul class="modal-features" id="modal-plan-features">
+                       <li>Long-term goal planning</li>
+                       <li>SIP growth estimation</li>
+                       <li>Investment tracking</li>
+                    </ul>
+                    <a href="#" class="modal-action" id="modal-select-plan">Choose This Plan</a>
+                  </div>
+               </div>
+            </div>
        </section>
+
     <!--SIP Calculator-->
        <section class="sip-section" id="Calculator" >
             <div class="sip-content">
@@ -226,6 +254,7 @@
                     </div>
                     <button class="calculate-btn">Calculate</button>
                 </div>
+
                 <div class="sip-results">
                     <h3>Your Invesment Summary</h3>
                     <div class="result-item">
@@ -244,5 +273,212 @@
                 </div>
             </div>
        </section>
+
+       <!--Benefits-Section-->
+       <section class="benefits-section" id="benefits">
+
+         <div class="benefits-content">
+          <div class="benefits-text">
+             <div class="benefits-head">WHY FUTURE SECURE</div>
+             <h2>Everything You Need to Plan Your Child's Future</h2>
+             <p>
+                 Future Secure brings simple planning tools together to help
+                 parents organize and manage their child's financial goals.
+             </p>
+          </div>
+
+        <div class="benefits-list">
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <div>
+                    <h3>Goal-Based Planning</h3>
+                    <p>Plan investments according to your child's future goals.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <div>
+                    <h3>Simple SIP Calculator</h3>
+                    <p>Estimate your investment growth using simple inputs.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-child"></i>
+                </div>
+                <div>
+                    <h3>Child Profile Management</h3>
+                    <p>Keep your child's planning information organized in one place.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                 <div class="benefit-icon">
+                     <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div>
+                      <h3>Growth Estimation</h3>
+                      <p>Understand how your planned investment may grow over time.</p>
+                  </div>
+               </div>
+            </div>
+        </div>
+       </section> 
+    
+    <!--FAQ-Section-->
+       <section class="faq-section" id="FAQ">
+
+         <div class="faq-content"> 
+            <div class="faq-head">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              Find answers to common questions about Future Secure
+              and investment planning.
+            </p>
+         </div>
+
+         <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                  <span>What is Future Secure?</span>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+
+               <div class="faq-answer">
+                  <p> 
+                     Future Secure is a child investment planning system
+                     that helps parents organize their child's future
+                     financial goals and investment plans.
+                  </p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                  <span>How does the investment planning work?</span>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                     Parents can create a child profile, set a financial
+                     goal, choose an investment amount and estimate
+                     potential growth over time.
+                  </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                  <span>What is the SIP Calculator used for?</span>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                     The SIP Calculator estimates the possible future value
+                     of regular monthly investments based on the values entered.
+                  </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                  <span>Are the calculated returns guaranteed?</span>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                     No. The calculated returns are only estimates based on
+                     the information entered and are not guaranteed.
+                  </p>
+                </div>
+            </div>
+
+           <div class="faq-item">
+              <button class="faq-question">
+                  <span>Can I manage multiple child profiles?</span>
+                  <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-answer">
+                  <p>
+                     Yes. Future Secure is designed to allow parents to
+                     organize planning information for multiple children.
+                  </p>
+              </div>
+           </div>
+         </div>  
+    </section>
+    
+    <!--CTA-Action-->
+    <section class="cta-section" >
+      <div class="cta-content"> 
+         <div class="cta-head">  READY TO PLAN AHEAD?</div>
+         <h2>Start Planning Your Child's Future Today</h2>
+         <p>
+            Take the first step towards organized and goal-based financial planning for your child's future.
+         </p>
+         <a class="cta-btn" href="signup.html">Get Started</a>
+      </div>
+    </section>
+    
+    <!--Footer-->
+    <footer class="footer-section">
+
+       <div class="footer-content">
+        <!-- Brand -->
+           <div class="footer-brand">
+             <h3>Future Secure</h3>
+             <p>
+                Simple and organized investment planning
+                for your child's future.
+             </p>
+             <p class="footer-contact">
+                 📧 support@futuresecure.com
+             </p>
+             <p class="footer-contact">
+                 📞 +91 98765 43210
+             </p>
+           </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+             <h4>Quick Links</h4>
+             <a href="#hero-section">Home</a>
+             <a href="#about">About</a>
+             <a href="#how-it-works">How It Works</a>
+             <a href="#plan">Plans</a>
+          </div>
+
+          <!-- Tools -->
+          <div class="footer-links">
+             <h4>Tools</h4>
+             <a href="#Calculator">SIP Calculator</a>
+             <a href="#benefits">Benefits</a>
+             <a href="#FAQ">FAQ</a>
+          </div>
+
+           <!-- Get Started -->
+          <div class="footer-action">
+             <h4>Plan Ahead</h4>
+             <p>
+                 Start planning today for a better financial future.
+             </p>
+             <a href="signup.html" class="footer-btn">Get Started</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+         <p>© 2026 Future Secure. All rights reserved.</p>
+         <p>Plan • Invest • Grow</p>
+        </div>
+    </footer>
 <script src="script.js"></script>
 </html>
