@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Future Secure</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <a href="index.html" class="login-logo">
+                <img src="logo1.png" alt="Future Secure Logo">
+            </a>
+
+            <div class="login-head">
+                <div>WELCOME BACK</div>
+
+                <h1>Login to Your Account</h1>
+
+                <p>
+                    Enter your details to continue planning your child's future.
+                </p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" >
+                    <small class="error-message" id="email-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <div class="password-box">
+                        <input type="password" id="login-password" placeholder="Enter your password">
+                        <button type="button" id="toggle-password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <small class="error-message" id="password-error"></small>
+                </div>
+                <button type="submit" class="login-submit">
+                    Login
+                </button>
+            </form>
+            <div class="signup-text">
+                Don't have an account?
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

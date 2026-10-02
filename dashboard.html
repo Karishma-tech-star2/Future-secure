@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Dashboard | Future Secure
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         DASHBOARD SIDEBAR
+    ================================================== -->
+
+    <aside
+        class="dashboard-sidebar"
+        id="dashboard-sidebar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="dashboard.html"
+            class="dashboard-logo">
+
+            <img
+                src="logo1.png"
+                alt="Future Secure Logo">
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="dashboard-nav">
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="dashboard.html"
+                class="dashboard-nav-link active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <!-- CHILDREN -->
+
+            <a
+                href="#children-section"
+                class="dashboard-nav-link">
+
+                <i class="fa-solid fa-child"></i>
+
+                <span>
+                    Children
+                </span>
+
+            </a>
+
+
+
+            <!-- GOALS -->
+
+            <a
+                href="#goals-section"
+                class="dashboard-nav-link">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <span>
+                    Goals
+                </span>
+
+            </a>
+
+
+
+            <!-- INVESTMENTS -->
+
+            <a
+                href="#investments-section"
+                class="dashboard-nav-link">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>
+                    Investments
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- ==================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="#profile-section"
+                class="sidebar-user"
+                id="profile-btn">
+
+                <div class="sidebar-user-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <span id="user-name">
+                    Profile
+                </span>
+
+            </a>
+
+
+
+            <!-- LOGOUT -->
+
+            <button
+                id="logout-btn"
+                type="button">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         MOBILE SIDEBAR BUTTON
+    ================================================== -->
+
+    <button
+        class="sidebar-toggle"
+        id="sidebar-toggle"
+        type="button">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+
+    <!-- ==================================================
+         MAIN DASHBOARD
+    ================================================== -->
+
+    <main class="dashboard-container">
+
+
+
+        <!-- ==================================================
+             WELCOME SECTION
+        ================================================== -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-text">
+
+
+                <div class="dashboard-head">
+                    DASHBOARD
+                </div>
+
+
+                <h1>
+
+                    Welcome,
+
+                    <span id="welcome-name">
+                        User
+                    </span>!
+
+                </h1>
+
+
+                <p>
+                    Manage your child's future planning
+                    and investment journey from one place.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ADD CHILD BUTTON -->
+
+            <button
+                class="add-child-btn"
+                type="button">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Child
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SUMMARY CARDS
+        ================================================== -->
+
+        <section class="summary-cards">
+
+
+            <!-- TOTAL CHILDREN -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-child"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Children
+                    </span>
+
+                    <strong id="total-children">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIVE GOALS -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Active Goals
+                    </span>
+
+                    <strong id="active-goals">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MONTHLY INVESTMENT -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Monthly Investment
+                    </span>
+
+                    <strong id="total-monthly-investment">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ESTIMATED GROWTH -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Estimated Growth
+                    </span>
+
+                    <strong id="total-estimated-growth">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             EMPTY CHILDREN STATE
+        ================================================== -->
+
+        <section
+            class="dashboard-empty"
+            id="empty-children">
+
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-child-reaching"></i>
+
+            </div>
+
+
+            <h2>
+                Start Planning for Your Child
+            </h2>
+
+
+            <p>
+                Add your child's profile to start
+                setting goals and planning investments
+                for their future.
+            </p>
+
+
+            <button
+                class="add-child-btn"
+                type="button">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Your First Child
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             MY CHILDREN
+        ================================================== -->
+
+        <section
+            class="children-section"
+            id="children-section">
+
+
+            <div class="children-heading">
+
+
+                <div>
+
+                    <div class="dashboard-head">
+                        CHILD PROFILES
+                    </div>
+
+
+                    <h2>
+                        My Children
+                    </h2>
+
+
+                    <p>
+                        View and manage your children's
+                        future planning details.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CHILD LIST -->
+
+            <div
+                class="children-list"
+                id="children-list">
+
+                <!-- Child cards are created by JavaScript -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             GOALS SECTION
+        ================================================== -->
+
+        <section
+            class="dashboard-content-section"
+            id="goals-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        FINANCIAL GOALS
+                    </span>
+
+
+                    <h2>
+                        Your Goals
+                    </h2>
+
+
+                    <p>
+                        Track the financial goals
+                        you have planned for your children.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GOALS LIST -->
+
+            <div
+                class="goals-list"
+                id="goals-list">
+
+                <!-- Goals are created by JavaScript -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             INVESTMENTS SECTION
+        ================================================== -->
+
+        <section
+            class="dashboard-content-section"
+            id="investments-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        INVESTMENTS
+                    </span>
+
+
+                    <h2>
+                        Your Investments
+                    </h2>
+
+
+                    <p>
+                        Review your monthly investment
+                        plans and estimated growth.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INVESTMENTS LIST -->
+
+            <div
+                class="investments-list"
+                id="investments-list">
+
+                <!-- Investments are created by JavaScript -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PROFILE SECTION
+        ================================================== -->
+
+        <section
+            class="dashboard-content-section"
+            id="profile-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        PROFILE
+                    </span>
+
+
+                    <h2>
+                        My Profile
+                    </h2>
+
+
+                    <p>
+                        View and manage your
+                        Future Secure account information.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 PROFILE CARD
+            ================================================== -->
+
+            <div class="dashboard-profile-card">
+
+
+                <!-- PROFILE ICON -->
+
+                <div class="dashboard-profile-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+
+                <!-- PROFILE INFORMATION -->
+
+                <div class="dashboard-profile-info">
+
+
+                    <!-- NAME -->
+
+                    <div class="profile-info-row">
+
+                        <span>
+                            Name
+                        </span>
+
+
+                        <strong id="dashboard-profile-name">
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="profile-info-row">
+
+                        <span>
+                            Email
+                        </span>
+
+
+                        <strong id="dashboard-profile-email">
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- SELECTED PLAN -->
+
+                    <div class="profile-info-row">
+
+                        <span>
+                            Selected Plan
+                        </span>
+
+
+                        <strong id="dashboard-profile-plan">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- PAYMENT STATUS -->
+
+                    <div class="profile-info-row">
+
+                        <span>
+                            Payment Status
+                        </span>
+
+
+                        <strong id="dashboard-profile-payment">
+                            Not Paid
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- PROFILE ACTIONS -->
+
+                    <div class="profile-action-grid">
+
+
+                        <!-- EDIT PROFILE -->
+
+                        <button
+                            type="button"
+                            class="profile-action-btn primary"
+                            id="edit-profile-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Edit Profile
+
+                        </button>
+
+
+
+                        <!-- CHANGE PASSWORD -->
+
+                        <button
+                            type="button"
+                            class="profile-action-btn secondary"
+                            id="change-password-btn">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            Change Password
+
+                        </button>
+
+
+
+                        <!-- CHANGE PLAN -->
+
+                        <button
+                            type="button"
+                            class="profile-action-btn secondary"
+                            id="change-plan-btn">
+
+                            <i class="fa-solid fa-arrows-rotate"></i>
+
+                            Change Plan
+
+                        </button>
+
+
+
+                        <!-- PAYMENT -->
+
+                        <button
+                            type="button"
+                            class="profile-action-btn primary"
+                            id="payment-btn">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            Make Payment
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         ADD / EDIT CHILD MODAL
+    ================================================== -->
+
+    <div
+        class="child-modal"
+        id="child-modal">
+
+
+        <div class="child-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="child-modal-close"
+                id="child-modal-close"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+
+            <!-- HEADING -->
+
+            <div class="child-modal-head">
+
+
+                <div>
+                    CHILD PROFILE
+                </div>
+
+
+                <h2 id="child-form-title">
+                    Add Your Child
+                </h2>
+
+
+                <p>
+                    Enter your child's details
+                    to start planning their future.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- CHILD FORM -->
+
+            <form id="child-form">
+
+
+                <!-- CHILD NAME -->
+
+                <div class="child-form-group">
+
+                    <label for="child-name">
+                        Child Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="child-name"
+                        placeholder="Enter child's name">
+
+
+                    <small id="child-name-error"></small>
+
+                </div>
+
+
+
+                <!-- CHILD AGE -->
+
+                <div class="child-form-group">
+
+                    <label for="child-age">
+                        Child Age
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="child-age"
+                        placeholder="Enter child's age"
+                        min="0"
+                        max="18">
+
+
+                    <small id="child-age-error"></small>
+
+                </div>
+
+
+
+                <!-- FINANCIAL GOAL -->
+
+                <div class="child-form-group">
+
+                    <label for="child-goal">
+                        Financial Goal
+                    </label>
+
+
+                    <select id="child-goal">
+
+
+                        <option value="">
+                            Select a goal
+                        </option>
+
+
+                        <option value="Higher Education">
+                            Higher Education
+                        </option>
+
+
+                        <option value="College Education">
+                            College Education
+                        </option>
+
+
+                        <option value="Business">
+                            Business
+                        </option>
+
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+
+                    </select>
+
+
+                    <small id="child-goal-error"></small>
+
+                </div>
+
+
+
+                <!-- TARGET AMOUNT -->
+
+                <div class="child-form-group">
+
+                    <label for="target-amount">
+                        Target Amount
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="target-amount"
+                        placeholder="Enter target amount"
+                        min="1">
+
+
+                    <small id="target-amount-error"></small>
+
+                </div>
+
+
+
+                <!-- MONTHLY INVESTMENT -->
+
+                <div class="child-form-group">
+
+                    <label for="monthly-investment">
+                        Monthly Investment
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="monthly-investment"
+                        placeholder="Enter monthly investment"
+                        min="1">
+
+
+                    <small id="monthly-investment-error"></small>
+
+                </div>
+
+
+
+                <!-- INVESTMENT DURATION -->
+
+                <div class="child-form-group">
+
+                    <label for="investment-duration">
+                        Investment Duration
+                    </label>
+
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="investment-duration"
+                            placeholder="Enter duration"
+                            min="1">
+
+
+                        <span>
+                            Years
+                        </span>
+
+                    </div>
+
+
+                    <small id="investment-duration-error"></small>
+
+                </div>
+
+
+
+                <!-- EXPECTED RETURN -->
+
+                <div class="child-form-group">
+
+                    <label for="expected-return">
+                        Expected Annual Return
+                    </label>
+
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="expected-return"
+                            placeholder="Enter expected return"
+                            min="0"
+                            step="0.1">
+
+
+                        <span>
+                            %
+                        </span>
+
+                    </div>
+
+
+                    <small id="expected-return-error"></small>
+
+                </div>
+
+
+
+                <!-- SAVE -->
+
+                <button
+                    type="submit"
+                    class="save-child-btn">
+
+                    Save Child
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         VIEW CHILD PROFILE MODAL
+    ================================================== -->
+
+    <div
+        class="profile-modal"
+        id="profile-modal">
+
+
+        <div class="profile-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="profile-modal-close"
+                id="profile-modal-close"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+
+            <div class="profile-modal-content">
+
+
+                <div class="profile-label">
+                    CHILD PROFILE
+                </div>
+
+
+                <h2 id="profile-name">
+                    Child Name
+                </h2>
+
+
+                <p id="profile-goal">
+                    Financial Goal
+                </p>
+
+
+
+                <!-- DETAILS -->
+
+                <div class="profile-details">
+
+
+                    <!-- AGE -->
+
+                    <div class="profile-detail">
+
+                        <span>
+                            Age
+                        </span>
+
+
+                        <strong id="profile-age">
+                            0 years
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- TARGET -->
+
+                    <div class="profile-detail">
+
+                        <span>
+                            Target Amount
+                        </span>
+
+
+                        <strong id="profile-target">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- MONTHLY -->
+
+                    <div class="profile-detail">
+
+                        <span>
+                            Monthly Investment
+                        </span>
+
+
+                        <strong id="profile-monthly">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- DURATION -->
+
+                    <div class="profile-detail">
+
+                        <span>
+                            Investment Duration
+                        </span>
+
+
+                        <strong id="profile-duration">
+                            0 Years
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- RETURN -->
+
+                    <div class="profile-detail">
+
+                        <span>
+                            Expected Return
+                        </span>
+
+
+                        <strong id="profile-return">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- FUTURE VALUE -->
+
+                    <div class="profile-detail">
+
+                        <span>
+                            Estimated Future Value
+                        </span>
+
+
+                        <strong id="profile-future-value">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         EDIT PROFILE MODAL
+    ================================================== -->
+
+    <div
+        class="account-modal"
+        id="edit-profile-modal">
+
+
+        <div class="account-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="account-modal-close"
+                id="edit-profile-modal-close"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+
+            <!-- HEADING -->
+
+            <div class="account-modal-head">
+
+
+                <div>
+                    PROFILE SETTINGS
+                </div>
+
+
+                <h2>
+                    Edit Profile
+                </h2>
+
+
+                <p>
+                    Update your Future Secure account information.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form id="edit-profile-form">
+
+
+                <!-- NAME -->
+
+                <div class="account-form-group">
+
+                    <label for="edit-profile-name">
+                        Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="edit-profile-name"
+                        placeholder="Enter your name">
+
+
+                    <small id="edit-profile-name-error"></small>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="account-form-group">
+
+                    <label for="edit-profile-email">
+                        Email
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="edit-profile-email"
+                        placeholder="Enter your email">
+
+
+                    <small id="edit-profile-email-error"></small>
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="account-modal-actions">
+
+
+                    <button
+                        type="button"
+                        class="account-secondary-btn"
+                        id="cancel-profile-btn">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="account-primary-btn">
+
+                        Save Changes
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         CHANGE PASSWORD MODAL
+    ================================================== -->
+
+    <div
+        class="account-modal"
+        id="change-password-modal">
+
+
+        <div class="account-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="account-modal-close"
+                id="change-password-close"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+
+            <!-- HEADING -->
+
+            <div class="account-modal-head">
+
+
+                <div>
+                    SECURITY
+                </div>
+
+
+                <h2>
+                    Change Password
+                </h2>
+
+
+                <p>
+                    Create a new password for your
+                    Future Secure account.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form id="change-password-form">
+
+
+                <!-- CURRENT PASSWORD -->
+
+                <div class="account-form-group">
+
+                    <label for="current-password">
+                        Current Password
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="current-password"
+                        placeholder="Enter current password">
+
+
+                    <small id="current-password-error"></small>
+
+                </div>
+
+
+
+                <!-- NEW PASSWORD -->
+
+                <div class="account-form-group">
+
+                    <label for="new-password">
+                        New Password
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="new-password"
+                        placeholder="Create a new password">
+
+
+                    <small id="new-password-error"></small>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="account-form-group">
+
+                    <label for="confirm-new-password">
+                        Confirm New Password
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="confirm-new-password"
+                        placeholder="Confirm new password">
+
+
+                    <small id="confirm-new-password-error"></small>
+
+                </div>
+
+
+
+                <!-- PASSWORD RULE -->
+
+                <p class="password-rule-note">
+
+                    Password must contain at least
+                    8 characters, one uppercase letter,
+                    one lowercase letter, one number
+                    and one special character.
+
+                </p>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="account-modal-actions">
+
+
+                    <button
+                        type="button"
+                        class="account-secondary-btn"
+                        id="cancel-password-btn">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="account-primary-btn">
+
+                        Update Password
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         CHANGE PLAN MODAL
+    ================================================== -->
+
+    <div
+        class="account-modal"
+        id="change-plan-modal">
+
+
+        <div
+            class="account-modal-box plan-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="account-modal-close"
+                id="change-plan-close"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+
+            <!-- HEADING -->
+
+            <div class="account-modal-head">
+
+
+                <div>
+                    INVESTMENT PLAN
+                </div>
+
+
+                <h2>
+                    Choose Your Plan
+                </h2>
+
+
+                <p>
+                    Select a plan for your child's
+                    future planning.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PLAN LIST -->
+
+            <div
+                class="plan-choice-list"
+                id="plan-choice-list">
+
+                <!-- Plans are created by JavaScript -->
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         PAYMENT MODAL
+    ================================================== -->
+
+    <div
+        class="account-modal"
+        id="payment-modal">
+
+
+        <div class="account-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="account-modal-close"
+                id="payment-close"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 PAYMENT STEP
+            ================================================== -->
+
+            <div id="payment-step">
+
+
+                <!-- HEADING -->
+
+                <div class="account-modal-head">
+
+
+                    <div>
+                        PAYMENT
+                    </div>
+
+
+                    <h2>
+                        Complete Your Payment
+                    </h2>
+
+
+                    <p>
+                        Selected Plan:
+                        <strong id="payment-plan-name">
+                            -
+                        </strong>
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- PAYMENT AMOUNT -->
+
+                <div class="payment-amount-box">
+
+
+                    <span>
+                        Monthly Investment
+                    </span>
+
+
+                    <strong id="payment-plan-amount">
+                        ₹0
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- PAYMENT METHOD -->
+                <div class="payment-form-group">
+
+    <label>
+        Select Payment Method
+    </label>
+
+    <div class="payment-method-grid">
+
+        <!-- UPI -->
+        <label class="payment-method">
+            <input
+                type="radio"
+                name="payment-method"
+                value="UPI"
+                checked>
+
+            <span>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                UPI
+            </span>
+        </label>
+
+        <!-- CARD -->
+        <label class="payment-method">
+            <input
+                type="radio"
+                name="payment-method"
+                value="Card">
+
+            <span>
+                <i class="fa-solid fa-credit-card"></i>
+                Card
+            </span>
+        </label>
+
+        <!-- NET BANKING -->
+        <label class="payment-method">
+            <input
+                type="radio"
+                name="payment-method"
+                value="Net Banking">
+
+            <span>
+                <i class="fa-solid fa-building-columns"></i>
+                Net Banking
+            </span>
+        </label>
+
+    </div>
+
+
+    <!-- YAHAN SE UPI SCANNER CODE AAYEGA -->
+     <div class="upi-payment-section" id="upi-payment-section">
+
+    <label class="upi-label">UPI Payment</label>
+
+    <div class="qr-payment-box">
+
+        <div id="payment-qr"></div>
+
+        <p class="qr-scan-text">
+            Scan this QR code to pay
+        </p>
+
+    </div>
+
+    <div class="upi-id-display">
+        <span>UPI ID</span>
+        <strong id="display-upi-id">futuresecure@upi</strong>
+    </div>
+
+    <div class="upi-amount-display">
+        <span>Amount</span>
+        <strong id="display-upi-amount">₹0</strong>
+    </div>
+
+</div>
+    <!-- UPI SCANNER CODE YAHAN KHATAM -->
+
+
+            </div>
+
+                <!-- DEMO NOTE -->
+
+                <div class="demo-payment-note">
+
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+
+                    <span>
+
+                        This is a demo payment flow
+                        for the Future Secure project.
+                        No real transaction will be processed.
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- PAYMENT BUTTON -->
+
+                <button
+                    type="button"
+                    class="account-primary-btn payment-submit-btn"
+                    id="demo-payment-btn">
+
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Complete Demo Payment
+
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 PAYMENT SUCCESS
+            ================================================== -->
+
+            <div
+                class="payment-success"
+                id="payment-success">
+
+
+                <!-- SUCCESS ICON -->
+
+                <div class="payment-success-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+
+                <h2>
+                    Payment Successful!
+                </h2>
+
+
+
+                <p>
+                    Your demo payment has been
+                    recorded successfully.
+                </p>
+
+
+
+                <!-- SUCCESS DETAILS -->
+
+                <div class="payment-success-details">
+
+
+                    <!-- PLAN -->
+
+                    <div>
+
+                        <span>
+                            Plan
+                        </span>
+
+
+                        <strong id="success-plan">
+                            -
+                        </strong>
+                    </div>
+
+                    <!-- METHOD -->
+                    <div>
+                        <span>
+                            Payment Method
+                        </span>
+                        <strong id="success-method">
+                            -
+                        </strong>
+                    </div>
+                    <!-- AMOUNT -->
+                    <div></div>
+                        <span>
+                            Amount
+                        </span>
+                        <strong id="success-amount">
+                            ₹0
+                        </strong>
+                    </div>
+                </div>
+                <!-- DONE -->
+                <button type="button" class="account-primary-btn" id="payment-success-close">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
